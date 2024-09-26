@@ -10,7 +10,15 @@
         iframe.onload = actions;
         document.getElementsByTagName('body')[0].appendChild(iframe);
         function actions(){
-            
+            document.getElementById('input').value='hello';
+            const event = new KeyboardEvent('keydown', {
+			  key: 'Enter',
+			  code: 'Enter',
+			  which: 13,
+			  keyCode: 13,
+			});
+
+            document.getElementById('input').dispatchEvent(event);
         }
         
 
