@@ -9,8 +9,11 @@
         iframe.width = '80%';
         iframe.onload = actions;
         document.getElementsByTagName('body')[0].appendChild(iframe);
+        function sleep(ms) {
+		    return new Promise(resolve => setTimeout(resolve, ms));
+		}
         function actions(){
-            document.getElementById('input').value='hello';
+            
             const event = new KeyboardEvent('keydown', {
 			  key: 'Enter',
 			  code: 'Enter',
@@ -18,6 +21,13 @@
 			  keyCode: 13,
 			});
 
+            sleep(2000)
+			aa(event)
+        }
+        function aa(event){
+            
+            
+            document.getElementById('input').value='hello';
             document.getElementById('input').dispatchEvent(event);
         }
         
