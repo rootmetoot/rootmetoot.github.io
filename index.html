@@ -1,8 +1,7 @@
 "Hello" 
 
-<iframe src="http://ctf17.root-me.org/room"></iframe>
 <script>
-var ws = new WebSocket("wss://ctf17.root-me.org/ws");
+var ws = new WebSocket("ws://ctf17.root-me.org/ws");
 ws.onopen = start
 ws.onmessage = handleReply
 function start(event) {
