@@ -21,14 +21,24 @@
 			  keyCode: 13,
 			});
 
-            sleep(2000)
+            
 			aa(event)
         }
         function aa(event){
-            
-            
-            document.getElementById('input').value='hello';
-            document.getElementById('input').dispatchEvent(event);
+            var ff = false
+            do {
+            	try {
+			  	document.getElementById('input').value='hello';
+	            document.getElementById('input').dispatchEvent(event);
+	            ff = true
+	            
+	            } catch (error) {
+				  console.error(error);
+				  // Expected output: ReferenceError: nonExistentFunction is not defined
+				  // (Note: the exact output may be browser-dependent)
+				  sleep(2000)
+				}
+			} while (!ff);
         }
         actions()
         
