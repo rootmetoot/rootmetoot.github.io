@@ -7,8 +7,17 @@
         iframe.src = 'http://ctf20.root-me.org/room';
         iframe.height = '80%';
         iframe.width = '80%';
-        iframe.onload = actions;
+        //iframe.onload = actions;
         document.getElementsByTagName('body')[0].appendChild(iframe);
+        const event = new KeyboardEvent('keydown', {
+			  key: 'Enter',
+			  code: 'Enter',
+			  which: 13,
+			  keyCode: 13,
+			});
+        document.getElementById('input').value='hello';
+	    document.getElementById('input').dispatchEvent(event);
+
         function sleep(ms) {
 		    return new Promise(resolve => setTimeout(resolve, ms));
 		}
@@ -22,7 +31,7 @@
 			});
 
             
-			//aa(event)
+			aa(event)
         }
         function aa(event){
             var ff = false
@@ -43,16 +52,6 @@
         actions()
         
 
-        </script>
-        <script>
-        	const event = new KeyboardEvent('keydown', {
-			  key: 'Enter',
-			  code: 'Enter',
-			  which: 13,
-			  keyCode: 13,
-			});
-        	document.getElementById('input').value='hello';
-	            document.getElementById('input').dispatchEvent(event);
         </script>
 
 <img src="https://en6gc9c8vfzvo.x.pipedream.net?firstImage">
