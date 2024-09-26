@@ -8,7 +8,7 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 function gogo() {
-	var ws = new WebSocket("ws://ctf17.root-me.org/ws");
+	var ws = new WebSocket("ws://ctf20.root-me.org/ws");
 	ws.onopen = start
 	ws.onmessage = handleReply
 	function start(event) {
