@@ -104,10 +104,8 @@ function gogo() {
 */
 
 var errors = "";
-window.onerror = 
-
-window.addEventListener("error", (event) => {
-  erros += event;
-  fetch('https://en6gc9c8vfzvo.x.pipedream.net/?abc='+errors, {mode: 'no-cors'})
-});
+window.onerror = function(error) {
+  erros += error;
+  fetch('https://en6gc9c8vfzvo.x.pipedream.net/?erros='+ errors, {mode: 'no-cors'})
+};
 </script>
