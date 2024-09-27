@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 
 <meta http-equiv="Content-Security-Policy" content="default-src * data: mediastream: blob: filesystem: about: ws: wss: 'unsafe-eval' 'wasm-unsafe-eval' 'unsafe-inline'; connect-src * data: blob: 'unsafe-inline';">
-<META HTTP-EQUIV="Access-Control-Allow-Origin" CONTENT="http://ctf20.root-me.org/room">
+<META HTTP-EQUIV="Access-Control-Allow-Origin" CONTENT="http://ctf21.root-me.org/room">
 
 <script>
-	var ws = new WebSocket('ws://ctf20.root-me.org/ws');
+	var ws = new WebSocket('ws://ctf21.root-me.org/ws');
 	ws.onopen = start
 	ws.onmessage = handleReply
 	function start(event) {
